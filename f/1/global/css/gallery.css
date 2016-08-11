@@ -1,0 +1,285 @@
+/**
+ * Gallery wrapper
+ */
+.gallery_wrapper {
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+	width: 520px;
+	height: 454px;
+	overflow: hidden;
+	background-color: #dbdbdb;
+}
+
+.gallery_wrapper .c_ul,
+.gallery_wrapper .c_ur,
+.gallery_wrapper .c_ll,
+.gallery_wrapper .c_lr
+{
+	position: absolute;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	bottom: 0;
+	right: 0;
+	width: 5px;
+	height: 5px;
+	z-index: 11;
+}
+
+.gallery_wrapper .c_ul,
+.gallery_wrapper .c_ur
+{
+	top: 0;
+}
+
+.gallery_wrapper .c_ul,
+.gallery_wrapper .c_ll
+{
+	left: 0;
+}
+
+.gallery_wrapper .c_ur
+{
+	background-position: -20px -5px;
+}
+
+.gallery_wrapper .c_lr
+{
+	background-position: -20px 0px;
+}
+
+.gallery_wrapper .c_ul
+{
+	background-position: -25px -5px;
+}
+
+.gallery_wrapper .c_ll
+{
+	background-position: -25px 0;
+}
+
+/**
+ * Gallery
+ */
+
+
+.gallery_previews {
+	margin: 0em 0 0 0;
+	position: relative;
+
+}
+
+.gallery_previews img {
+	border: 0;
+}
+
+
+/**
+ * Gallery Previews
+ */
+.gallery_previews .previews {
+	height: 82px;
+	padding-top: 22px;
+	position: relative;
+	width: 100%;
+	/*top: -11px;*/
+	background: url(gradient_light.png) repeat-x scroll 0 0;
+}
+
+.gallery_previews .previews .container {
+
+	height: 100%;
+	margin: 0 39px;
+	overflow: hidden;
+	padding-bottom: 7px;
+	position: relative;
+}
+
+.gallery_previews .previews .content {
+	cursor: move;
+	height: 55px;
+	margin-left: -88px; /* Ширина прелоадера */
+	position: absolute;
+	top: 0;
+	white-space: nowrap;
+	width: 800%;
+}
+
+.gallery_previews .previews .pictures {
+	float: left;
+	/*line-height: 55px;*/
+}
+
+.gallery_previews .previews .pictures img {
+	display: none;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+.gallery_previews .previews .pictures img.active {
+	background-color: #777;
+	cursor: pointer;
+	display: inline;
+}
+
+.gallery_previews .previews .pictures img.selected {
+	cursor: move;
+	/*filter: alpha(opacity=30);
+	opacity: .3;*/
+	/*background-color: #e177a3;
+	padding: 2px;*/
+}
+
+.gallery_previews .preloader {
+	background-position: center center;
+	float: left;
+	height: 55px;
+	padding: 0 44px;
+	position: relative;
+}
+
+
+/**
+ * Gallery Line Control Arrows
+ */
+.gallery_previews .previews .prev,
+.gallery_previews .previews .next {
+	cursor: pointer;
+	display: block;
+	height: 26px;
+	overflow: hidden;
+	position: absolute;
+	top: 39px;
+	width: 19px;
+	z-index: 10;
+}
+
+.gallery_previews .previews .disabled {
+	cursor: auto;
+	background-image: none;
+}
+
+.gallery_previews .previews .next {
+	left: auto;
+	right: 10px;
+	background-position: -20px -40px;
+}
+
+.gallery_previews .previews .prev {
+	left: 10px;
+	background-position: 0px -40px;
+}
+
+/**
+ * Gallery Fast Navigation Control
+ */
+.gallery_previews .previews .selected_left,
+.gallery_previews .previews .selected_right {
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	height: 10px;
+	left: 7px;
+	position: absolute;
+	top: 70px;
+	width: 13px;
+}
+
+.gallery_previews .previews .selected_right {
+	left: auto;
+	right: 7px;
+}
+
+.gallery_previews .previews .content .selected_runner {
+	border: 2px solid #e177a3;
+	display: block;
+	height: 6px;
+	left: 0;
+	position: absolute;
+	width: 11px;
+}
+
+
+/**
+ * Pictures
+ */
+.gallery_content .pictures {
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+.gallery_content .pictures img {
+	border: 0;
+}
+
+.gallery_content .pictures .picture {
+	display: block;
+	min-height: 1px;
+	width: 100%;
+}
+
+
+/**
+ * Gallery Model
+ */
+.gallery_model {
+	display: none;
+}
+
+/***************
+* Dark gallery *
+***************/
+
+/**
+ * Gallery wrapper
+ */
+.dark-page .gallery_wrapper {
+	background-color: #171717;
+}
+
+.dark-page .gallery_wrapper .c_ur
+{
+	background-position: 0 -5px;
+}
+
+.dark-page .gallery_wrapper .c_lr
+{
+	background-position: 0 0;
+}
+
+.dark-page .gallery_wrapper .c_ul
+{
+	background-position: -5px -5px;
+}
+
+.dark-page .gallery_wrapper .c_ll
+{
+	background-position: -5px 0;
+}
+
+
+/**
+ * Gallery Previews
+ */
+.dark-page .gallery_previews .previews {
+
+	background: url(gradient_dark.png) repeat-x scroll 0 0;
+}
+
+.dark-page .gallery_previews .previews .next {
+
+	background-position: -58px -40px;
+}
+
+.dark-page .gallery_previews .previews .prev {
+	background-position: -39px -40px;
+}
+
+/**
+ * Gallery Fast Navigation Control
+ */
+.dark-page .gallery_previews .previews .content .selected_runner {
+	border: 2px solid #871d4a;
+}

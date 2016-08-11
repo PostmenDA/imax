@@ -1,0 +1,618 @@
+/*********** GPS STOP POPUP ************************************************************************************************************/
+TABLE.gps_stop_popup {
+	border: 0;
+	margin: 0;
+	width: 100%;
+	font-size: 11px;	
+	font-family: Verdana, Geneva, sans-serif;
+	padding: 0;	
+	border-collapse: collapse;
+}
+TABLE.gps_stop_popup_2 {
+	border: 0;
+	width: 100%;
+	margin: 0;
+	font-size: 11px;	
+	font-family: Verdana, Geneva, sans-serif;
+	border-bottom:1px #C3C3C3 solid;
+	padding: 0;
+	border-collapse: collapse;
+}
+TABLE.gps_stop_popup_3 {
+	border: 0;
+	width: 100%;
+	margin: 0;
+	font-size: 11px;	
+	font-family: Verdana, Geneva, sans-serif;
+	padding: 0;
+	border-collapse: collapse;
+}
+DIV.gps_stop_popup_routes_grid_item{
+	position: relative;
+	display: inline-block;
+	float: left;
+	margin: 0;
+	padding: 0;	
+	padding-right: 15px;
+	padding-bottom: 2px;
+	padding-top: 2px;	
+}
+DIV.gps_stop_popup_routes_grid_item A{
+	color: #000;
+	text-decoration: none;	
+	font-weight: bold;
+	font-size: 11px;	
+	font-family: Verdana, Geneva, sans-serif;
+}
+TD.gps_stop_popup_routes_grid_table{
+	padding-left: 60px;
+}
+DIV.gps_stop_popup_body {
+	padding: 0;
+	border: 0;
+	margin: 0;
+	max-height: 250px;
+	overflow-y: auto;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+SPAN.gps_stop_popup_stop_label {
+	color: #58ACC6;
+	font-weight: bold;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+TD.gps_stop_popup_nearest_next_label {	
+	color: #828081;	
+	/*text-align: center;*/	
+	width: 98px;
+	font-weight: bold;
+}
+SPAN.gps_stop_popup_arrival_time_gps {
+	color: #2E8B57;
+}
+SPAN.gps_stop_popup_arrival_time_schedule {
+	color: #0000CD;
+	cursor: pointer;
+}
+SPAN.gps_stop_popup_arrival_time_delay {
+	color: #B22222;	
+	position: relative;
+	font-size: 10px;
+	top: -5px;
+	left: 2px;
+	cursor: pointer;
+}
+SPAN.legend_gps {
+	color: #2E8B57;
+	margin: 0;
+	margin-right: 10px;
+	padding: 0;
+}
+SPAN.legend_schedule {
+	color: #0000CD;
+	margin: 0;
+	margin-right: 10px;
+	padding: 0;
+}
+SPAN.legend_delay_ahead {
+	color: #B22222;
+	margin: 0;
+	margin-right: 10px;
+	padding: 0;
+}
+
+SPAN.legend_gps:BEFORE {
+	position: relative;
+	top: .6px;
+	content: "•";	
+}
+
+SPAN.legend_schedule:BEFORE {
+	position: relative;
+	top: .6px;
+	content: "•";	
+}
+
+SPAN.gps_stop_popup_stop_name {
+	color: #6F6F6F;
+	font-weight: bold;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+DIV.gps_stop_popup_icon_stop {
+	background: url("../images/tooltip/tooltip_stop.png") no-repeat 50% 50%;
+	width: 22px;
+	height: 22px;
+}
+TD.gps_stop_popup_header_left {
+	line-height: 13px;
+	width: 37px;
+	background: #F6F6F6;
+	-moz-border-radius: 4px 0 0 0;
+	-webkit-border-radius: 4px 0 0 0;
+	border-radius: 4px 0 0 0;
+	font-size: 12px;
+	padding-left: 17px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+TD.gps_stop_popup_header_right {
+	line-height: 13px;
+	text-align: left;
+	background: #F6F6F6;	
+	-moz-border-radius: 0 4px 0 0;
+	-webkit-border-radius: 0 4px 0 0;
+	border-radius: 0 4px 0 0;
+	font-size: 12px;
+	padding: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 15px;	
+}
+DIV.gps_stop_popup_icon_vehicle {
+	min-height: 25px;
+	margin-left: 17px;
+	margin-right: 7px;
+	margin-top: 4px;
+	padding-left: 30px;
+	padding-top: 4px;
+	color: #555;
+	font-size: 11px;	
+	font-family: Verdana, Geneva, sans-serif;
+}
+DIV.gps_stop_popup_no_gps_data_label {
+	margin-left: 17px;
+	margin-right: 7px;
+	margin-top: 4px;
+	padding-left: 30px;
+	padding-top: 4px;
+	color: #555;
+	font-size: 11px;	
+	font-family: Verdana, Geneva, sans-serif;
+}
+DIV.gps_stop_popup_icon_bus_blue {
+	background: url("../images/transports/bus-blue.png") no-repeat;
+}
+DIV.gps_stop_popup_icon_trol_blue {
+	background: url("../images/transports/trol-blue.png") no-repeat;
+}
+DIV.gps_stop_popup_icon_tram_blue {
+	background: url("../images/transports/tram-blue.png") no-repeat;
+}
+DIV.gps_stop_popup_icon_boat_blue {
+	background: url("../images/transports/boat-blue.png") no-repeat;
+}
+DIV.gps_stop_popup_icon_metro_blue {
+	background: url("../images/transports/metro-blue.png") no-repeat;
+}
+DIV.gps_stop_popup_icon_train_blue {
+	background: url("../images/transports/train-blue.png") no-repeat;
+}
+
+DIV.gps_stop_popup_icon_bus_green {
+	background: url("../images/transports/bus-green.png") no-repeat;
+}
+DIV.gps_stop_popup_icon_trol_green {
+	background: url("../images/transports/trol-green.png") no-repeat;
+}
+DIV.gps_stop_popup_icon_tram_green {
+	background: url("../images/transports/tram-green.png") no-repeat;
+}
+DIV.gps_stop_popup_icon_boat_green {
+	background: url("../images/transports/boat-green.png") no-repeat;
+}
+DIV.gps_stop_popup_icon_metro_green {
+	background: url("../images/transports/metro-green.png") no-repeat;
+}
+DIV.gps_stop_popup_icon_train_green {
+	background: url("../images/transports/train-green.png") no-repeat;
+}
+
+
+TD.gps_stop_popup_route {	
+	text-align: left;
+	color: #000;
+	/*padding-top: 4px;*/	
+	padding: 0;
+	padding-right: 10px;
+	padding-left: 60px;
+}
+TD.gps_stop_popup_route A {
+	color: #000;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 11px;	
+	font-family: Verdana, Geneva, sans-serif;
+}
+TD.gps_stop_popup_mins{	
+	/*text-align: center;*/
+	color: #000;
+	padding-top: 4px;
+	padding: 0;
+	width: 98px;
+}
+DIV.gps_stop_popup_handicapped{
+	background: url("../images/handicapped_stop_popup.png") no-repeat;
+	width: 14px;
+	height: 15px;
+	position: relative;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	margin-left: 8px;
+	top: 1px;
+}
+DIV.gps_stop_popup_wifi{
+	background: url("../images/wifi_stop_popup.png") no-repeat;
+	width: 18px;
+	height: 12px;
+	position: relative;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	margin-left: 10px;	
+}
+/***********************************************************************************************************************/
+
+
+
+
+DIV.gps_stop_info_icon_stop {
+	background: url("../images/tooltip/tooltip_stop.png") no-repeat 50% 50%;
+	width: 22px;
+	height: 22px;
+	/*margin: 10px;*/
+}
+DIV.gps_stop_info_icon_vehicle {
+	min-height: 25px;
+	margin-left: 7px;
+	margin-right: 7px;
+	margin-top: 4px;
+	padding-left: 30px;
+	padding-top: 4px;
+	color: #555;
+	font-size: 11px;	
+	font-family: Verdana, Geneva, sans-serif;
+}
+DIV.gps_stop_info_icon_bus_blue {
+	background: url("../images/transports/bus-blue.png") no-repeat;
+}
+DIV.gps_stop_info_icon_trol_blue {
+	background: url("../images/transports/trol-blue.png") no-repeat;
+}
+DIV.gps_stop_info_icon_tram_blue {
+	background: url("../images/transports/tram-blue.png") no-repeat;
+}
+DIV.gps_stop_info_icon_boat_blue {
+	background: url("../images/transports/boat-blue.png") no-repeat;
+}
+DIV.gps_stop_info_icon_metro_blue {
+	background: url("../images/transports/metro-blue.png") no-repeat;
+}
+DIV.gps_stop_info_icon_train_blue {
+	background: url("../images/transports/train-blue.png") no-repeat;
+}
+
+DIV.gps_stop_info_icon_bus_green {
+	background: url("../images/transports/bus-green.png") no-repeat;
+}
+DIV.gps_stop_info_icon_trol_green {
+	background: url("../images/transports/trol-green.png") no-repeat;
+}
+DIV.gps_stop_info_icon_tram_green {
+	background: url("../images/transports/tram-green.png") no-repeat;
+}
+DIV.gps_stop_info_icon_boat_green {
+	background: url("../images/transports/boat-green.png") no-repeat;
+}
+DIV.gps_stop_info_icon_metro_green {
+	background: url("../images/transports/metro-green.png") no-repeat;
+}
+DIV.gps_stop_info_icon_train_green {
+	background: url("../images/transports/train-green.png") no-repeat;
+}
+
+
+
+SPAN.gps_stop_info_stop_label {
+	color: #58ACC6;
+	font-weight: bold;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+
+SPAN.gps_stop_info_stop_name {
+	color: #6F6F6F;
+	font-weight: bold;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+HR.gps_stop_info {
+	width: 90%;	
+	height:1px;
+	border:0;
+	color: #A2A2A2; 
+	background-color:#A2A2A2; 
+}
+
+/**********************************************************************************************************/
+
+TABLE.gps_stop_info {
+	border: 0;
+	/*width: 100%;*/
+	width: auto;
+	margin: 0;
+	margin-bottom: 20px;
+	font-size: 11px;	
+	font-family: Verdana, Geneva, sans-serif;	
+}
+
+TABLE.gps_stop_info THEAD{
+	display: block;
+	width: 310px;
+	padding-bottom: 3px;
+}
+TABLE.gps_stop_info TBODY{
+	display: block;
+	width: 310px;
+	max-height: 250px;
+	overflow-y: auto;
+}
+
+TABLE.gps_stop_info A {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+}
+
+TD.gps_stop_info_rows_1col {
+	width: 38px;
+width: 41px;	
+}
+TD.gps_stop_info_rows_2col {
+	width: 65px;	
+}
+TD.gps_stop_info_header_1col {
+	width: 42px;	
+}
+TD.gps_stop_info_header_2col {
+	width: 20px;
+}
+TD.gps_stop_info_header_3col {
+	width: 19px;
+}
+TD.gps_stop_info_header_left {
+	line-height: 13px;
+	width: 37px;
+	background: #F6F6F6;
+	-moz-border-radius: 4px 0 0 0;
+	-webkit-border-radius: 4px 0 0 0;
+	border-radius: 4px 0 0 0;
+	font-size: 12px;
+	padding-left: 17px;
+	/*padding-right: 13px;*/
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+TD.gps_stop_info_header_right {
+	line-height: 13px;
+	text-align: left;
+	background: #F6F6F6;
+	/*padding-right: 23px;*/
+	width: 256px;
+	-moz-border-radius: 0 4px 0 0;
+	-webkit-border-radius: 0 4px 0 0;
+	border-radius: 0 4px 0 0;
+	font-size: 12px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+TD.gps_stop_info_hr {
+	border-bottom: 1px #C3C3C3 solid;
+}
+TD.gps_stop_info_nearest_next_label {	
+	color: #828081;	
+	/*text-align: center;*/	
+/*	padding-right: 15px;*/
+	width: 98px;
+	font-weight: bold;
+}
+TD.gps_stop_info_vehicle_icon {	
+	vertical-align: top;
+	padding-left: 9px;
+	padding-top: 4px;
+}
+TD.gps_stop_info_mins{	
+	/*text-align: center;*/
+	color: #000;
+	padding-top: 4px;
+	/*padding-right: 10px;*/
+	padding: 0;
+	width: 98px;
+}
+TD.gps_stop_info_no_mins{	
+	text-align: center;
+	color: #000;
+	padding-top: 4px;
+	padding-right: 10px;
+	padding: 0;
+	width: 98px;
+}
+TD.gps_stop_info_route A{
+	color: #000;
+	font-weight: bold;
+	text-decoration: none;
+}
+TD.gps_stop_info_route {	
+	/*text-align: right;*/
+	text-align: left;
+	color: #000;
+	padding-top: 4px;
+	padding-right: 10px;
+	padding: 0;
+padding-left: 20px;
+	width: 35px
+}
+TD.gps_stop_info_no_gps{	
+	text-align: center;
+	color: #6F6F6F;
+	/*padding-top: 4px;*/
+	padding-left: 10px;
+}
+TD.gps_stop_info_details {	
+	text-align: right;
+	font-weight: bold;
+}
+TD.gps_stop_info_details A{
+	color: #58ACC6;
+	text-decoration: none;
+}
+TD.gps_stop_info_routes_grid_table{
+	/*padding-left: 28px;*/
+	padding-left: 20px;
+}
+TD.gps_stop_info_horizontal_line{
+	width: 301px;
+}
+
+/***************************************************************************************************************************/
+
+DIV.stop_info_icon_stop {
+	background: url("../images/tooltip/tooltip_stop.png") no-repeat 50% 50%;
+	width: 22px;
+	height: 22px;
+	margin-left: 18px;
+	margin-right: 12px;	
+}
+TABLE.stop_info {
+	border: 0;
+	/*width: 100%;*/
+	width: auto;
+	margin: 0;
+	font-size: 14px;
+	margin-bottom: 20px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+}
+TABLE.stop_info A {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+}
+
+TD.stop_info_header_left {
+	line-height: 13px;
+	width: 42px;
+	background: #F6F6F6;
+	-moz-border-radius: 4px 0 0 0;
+	-webkit-border-radius: 4px 0 0 0;
+	border-radius: 4px 0 0 0;
+	font-size: 12px;
+	/*padding-left: 17px;*/
+	/*padding-right: 13px;*/
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+TD.stop_info_header_right {
+	line-height: 13px;
+	text-align: left;
+	background: #F6F6F6;
+	padding-right: 17px;
+	-moz-border-radius: 0 4px 0 0;
+	-webkit-border-radius: 0 4px 0 0;
+	border-radius: 0 4px 0 0;
+	font-size: 12px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+TD.stop_info_hr {
+	border-bottom: 1px #C3C3C3 solid;
+}
+TD.stop_info_vehicle_icon {	
+	vertical-align: top;
+	padding-left: 8px;
+	padding-top: 4px;
+}
+TD.stop_info_details {	
+	text-align: right;
+	font-weight: bold;
+}
+TD.stop_info_details A{
+	color: #58ACC6;
+	text-decoration: none;
+	font-size: 11px;
+}
+TD.stop_info_routes_numbers_table {
+	padding-left: 25px;
+}
+
+/**********************************************************************************************************/
+
+DIV.gps_stop_info_routes_grid {
+	display: block;	
+}
+SPAN.gps_stop_info_routes_grid_item {
+	float: left;
+	padding-right: 15px;
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
+SPAN.gps_stop_info_routes_grid_item A{
+	color: #000;
+	text-decoration: none;	
+	font-weight: bold;
+}
+
+TABLE.gps_stop_info_routes_grid {
+	border: 0;
+}
+
+TABLE.gps_stop_info_routes_grid TBODY{
+	border: 0;
+	height: auto;
+	width: auto;
+}
+
+TABLE.gps_stop_info_routes_grid A{
+	color: #000;
+	text-decoration: none;	
+	font-weight: bold;
+}
+TABLE.gps_stop_info_routes_grid TD{
+	padding-top: 4px;
+	text-align: left;
+	padding-right: 15px;	
+}
+
+TABLE.stop_info_routes_grid {
+	border: 0;
+	margin-left: 35px;
+	margin-right: 10px;
+}
+
+TABLE.stop_info_routes_grid A{
+	color: #000;
+	text-decoration: none;	
+	font-weight: bold;
+}
+TABLE.stop_info_routes_grid TD{
+	padding-top: 4px;
+	text-align: left;
+	padding-right: 15px;	
+}
+
+DIV.stop_info_routes_grid {
+	display: block;	
+	min-width: 150px;
+	margin-left: 35px;
+}
+SPAN.stop_info_routes_grid_item {
+	float: left;
+	padding-right: 15px;
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
+SPAN.stop_info_routes_grid_item A{
+	color: #000;
+	text-decoration: none;	
+	font-weight: bold;
+}	

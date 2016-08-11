@@ -1,0 +1,41 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+body {
+	color: #252525;
+	font: 100% 'Open Sans', Arial, sans-serif;
+	line-height: 1.5;
+}
+
+img { border: 0; }
+
+a { color: #00a0e2; }
+a:hover { color: #e2005e; }
+
+p { margin-bottom:0.77em; }
+
+#logo {
+	position: absolute;
+	left: 32px;
+	top: 15px;
+}
+
+
+
+
+
+#content { padding: 0 0 0 135px; }
+
+h1 {
+	font: bold 230% "Trebuchet MS", sans-serif;
+	line-height: 1.2;
+	margin: 0;
+}
+h1 .error {
+	font: normal 37% Arial, Helvetica, sans-serif;
+	color: #7f7f7f;
+}

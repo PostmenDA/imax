@@ -1,0 +1,253 @@
+/*-----------------------Tooltip--------------------------*/
+
+.tooltip_div
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.tooltip_left_div
+{
+	height: 54px;
+	background: transparent url(../images/tooltip_bg_left.png) no-repeat left top;
+	margin: 0;
+	padding: 0 0 0 35px;
+	overflow: visible;
+}
+
+.tooltip_right_div
+{
+	height: 54px;
+	background: transparent url(../images/tooltip_bg_right.png) no-repeat right center;
+	margin: 0;
+	padding: 0 11px 0 0;
+}
+
+.tooltip_center_div
+{
+	height: 54px;
+	background: transparent url(../images/tooltip_bg.png) repeat-x center top;
+	margin: 0;
+	padding: 0 5px 0 0;
+	overflow: visible;
+}
+
+.tooltip_center_div span.stop
+{
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	position: relative;
+	line-height: 45px;
+	left: -10px;
+	color: #000000;
+	font-size: 11px;
+}
+
+
+/*
+.tooltip_center_div span.result_trol,
+.tooltip_center_div span.result_tram,
+.tooltip_center_div span.result_metro,
+.tooltip_center_div span.result_bus,
+.tooltip_center_div span.result_train,
+.tooltip_center_div span.result_boat
+{
+	margin: 8px 0 0 -23px;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Verdana;
+}
+
+.result_bus
+{
+	font-weight: bold;
+	margin: 0 5px 0 0;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 0 0 30px;
+	display: inline-block;
+	background: transparent url(../images/bus_green.png) no-repeat top left;
+}
+
+.result_trol
+{
+	font-weight: bold;
+	margin: 0 5px 0 0;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 0 0 30px;
+	display: inline-block;
+	background: transparent url(../images/trol_green.png) no-repeat top left;
+}
+
+.result_tram
+{
+	font-weight: bold;
+	margin: 0 5px 0 0;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 0 0 30px;
+	display: inline-block;
+	background: transparent url(../images/tram_green.png) no-repeat top left;
+}
+
+.result_metro
+{
+	font-weight: bold;
+	margin: 0;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 0 0 30px;
+	display: inline-block;
+	background: transparent url(../images/metro_green.png) no-repeat top left;
+}
+
+.result_train
+{
+	font-weight: bold;
+	margin: 0;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 0 0 30px;
+	display: inline-block;
+	background: transparent url(../images/train_green.png) no-repeat top left;
+}
+
+.result_boat
+{
+	font-weight: bold;
+	margin: 0;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 0 0 30px;
+	display: inline-block;
+	background: transparent url(../images/boat_green.png) no-repeat top left;
+}
+*/
+
+.result_bus
+{
+	background: transparent url(/images/transports/bus-green.png) no-repeat top left;
+}
+
+.result_trol
+{
+	background: transparent url(/images/transports/trol-green.png) no-repeat top left;
+}
+
+.result_marsh
+{
+	background: transparent url(/images/transports/marsh-green.png) no-repeat top left;
+}
+
+.result_tram
+{
+	background: transparent url(/images/transports/tram-green.png) no-repeat top left;
+}
+
+.result_metro
+{
+	background: transparent url(/images/transports/metro-green.png) no-repeat top left;
+	vertical-align: middle;
+}
+
+.result_train
+{
+	background: transparent url(/images/transports/train-green.png) no-repeat top left;
+}
+
+.result_boat
+{
+	background: transparent url(/images/transports/boat-green.png) no-repeat top left;
+}
+
+.result_auto
+{
+	background: transparent url(/images/transports/auto-green.png) no-repeat top left;
+}
+
+.result_walk
+{
+	text-transform: capitalize;
+	background: transparent url(/images/transports/walk-green.png) no-repeat top left;
+}
+
+.result_bus,
+.result_trol,
+.result_marsh,
+.result_tram,
+.result_metro,
+.result_train,
+.result_boat,
+.result_auto,
+.result_walk
+{
+	margin: 0 0 2px 0;
+	padding: 0 0 0 26px;
+	font-weight: bold;
+	height: 25px;
+	line-height: 25px;
+	display: inline-block;
+}
+
+#eway_widget_table .tooltip_company_name
+{
+	font-weight: bold;
+	padding: 0 0 5px 0;
+	color: #000000;
+	font-family: Verdana;
+	font-size: 11px;
+	line-height: 12px;
+	margin-right: 12px;
+}
+
+#eway_widget_table .tooltip_company_address
+{
+	font-style: italic;
+	padding: 0 0 5px 0;
+	color: #000000;
+	font-family: Verdana;
+	font-size: 11px;
+	line-height: 12px;
+}
+
+#eway_widget_table .tooltip_company_info
+{
+	padding: 0;
+	color: #000000;
+	font-family: Verdana;
+	font-size: 11px;
+	line-height: 12px;
+}
+
+table.tooltip tr td.center div.text a.tooltip-route-link
+{
+	text-decoration: none;
+	color: #000000;
+}
+
+table.tooltip tr td.center div.text a.tooltip-route-link span.result_transport
+{
+	color: #000000;
+	font-weight: normal;
+	font-family: Verdana;
+	font-size: 12px;
+}
+table.tooltip tr td.center div.text span {
+	height: 25px; 
+	line-height: 25px; 
+	display: block; 
+	padding: 0 0 0 30px; 
+	text-align: left; 
+}
+
+table.tooltip tr td.center div.padding
+{
+	padding: 5px;
+}
+
+table.tooltip tr td.center div.text a.tooltip-route-link:hover
+{
+	text-decoration: underline;
+}

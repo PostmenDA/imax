@@ -1,0 +1,142 @@
+
+/** Livetex Buttons **/
+.lt-button {
+display: inline-block;
+overflow: hidden;
+cursor: pointer;
+position: relative;
+
+/* ie 7*/
+*display: inline;
+*zoom:1;
+}
+
+      #liveTexButton_20679, .liveTexButton_20679 {
+    font-family: Arial,sans-serif;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    }
+
+    #liveTexButton_20679.lt-offline, .liveTexButton_20679.lt-offline {
+    background-color: #efefef;
+    box-shadow: 0px 1px 0px #bbbbbb;
+    }
+
+          /* Большие кнопки */
+
+      #liveTexButton_20679, .liveTexButton_20679 {
+      width: 222px;
+      height: 97px;
+            }
+
+      #liveTexButton_20679.lt-online, .liveTexButton_20679.lt-online {
+      background-color: #3099dd;
+      -webkit-box-shadow: inset 0 -1px rgba(0, 0, 0, 0.35);
+      -moz-box-shadow: inset 0 -1px rgba(0, 0, 0, 0.35);
+      box-shadow: inset 0 -1px rgba(0, 0, 0, 0.35);
+      box-shadow: 0px 1px 0px #1f75d1;
+      }
+
+      #liveTexButton_20679 .lt-status, .liveTexButton_20679 .lt-status {
+      font-family: Arial, Helvetica, sans-serif;
+              color: #fff;
+        text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+            position: absolute;
+      font-size: 11px;
+      line-height: 12px;
+      right: 7px;
+      top: 5px;
+      padding: 0;
+      margin: 0;
+      }
+
+      #liveTexButton_20679 .lt-status .lt-icon, .liveTexButton_20679 .lt-status .lt-icon {
+      padding: 0;
+      margin-left: 4px;
+      width: 6px;
+      height: 6px;
+      background: url(/img/sprite.png) no-repeat -58px -2px;
+      display: inline-block;
+      }
+
+      #liveTexButton_20679.lt-offline .lt-status, .liveTexButton_20679.lt-offline .lt-status {
+      color: #959595;
+      text-shadow: none;
+      }
+
+      #liveTexButton_20679.lt-offline .lt-status .lt-icon, .liveTexButton_20679.lt-offline .lt-status .lt-icon {
+      background: url(/img/sprite.png) no-repeat -58px -10px;
+      }
+
+      
+        #liveTexButton_20679 .lt-image, .liveTexButton_20679 .lt-image {
+        padding: 0;
+        margin: 0;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        border-radius: 25px;
+        position: absolute;
+        top: 23px;
+        left: 13px;
+        border: 1px solid #1f75d1;
+        box-shadow: 0px 0px 2px #ffffff;
+        }
+
+        #liveTexButton_20679.lt-offline .lt-image, .liveTexButton_20679.lt-offline .lt-image {
+        border: 1px solid #d9d9d9;
+        }
+
+        #liveTexButton_20679 .lt-image img, .liveTexButton_20679 .lt-image img {
+        width: 50px;
+        }
+
+        #liveTexButton_20679 .lt-title, .liveTexButton_20679 .lt-title {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        font-weight: bold;
+        position: absolute;
+        top: 32px;
+        left: 75px;
+        width: 145px;
+        font-size: 15px;
+        text-overflow: ellipsis;
+        text-align: left;
+                  color: #fff;
+          text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+                }
+
+        #liveTexButton_20679 .lt-subtitle, .liveTexButton_20679 .lt-subtitle {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        position: absolute;
+        font-size: 13px;
+        top: 50px;
+        left: 75px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: left;
+                  color: #fff;
+          text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+                }
+      
+      #liveTexButton_20679.lt-offline .lt-title, .liveTexButton_20679.lt-offline .lt-title {
+      color: #959595;
+      text-shadow: none;
+      }
+
+      #liveTexButton_20679.lt-offline .lt-subtitle, .liveTexButton_20679.lt-offline .lt-subtitle {
+      color: #959595;
+      text-shadow: none;
+      font-weight: normal;
+      }
+
+    
+    /* Белая и серая кнопки */
+    
+  

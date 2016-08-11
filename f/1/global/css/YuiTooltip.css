@@ -1,0 +1,177 @@
+/****************************************************************************************/ 
+.yui-tooltip {	
+	position: absolute;
+	padding: 6px;
+	z-index: 1000002;
+	font-family: Arial;
+	opacity: 0.8;
+	visibility: hidden;
+}
+
+.yui-tooltip-body {	
+	padding: 6px;
+	z-index: 1000002;
+	font-family: Arial;
+}
+
+.yui-tooltip-arrow {
+	position: absolute;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	border: 6px solid #FFF;
+}
+.yui-tooltip-subarrow {
+	position: absolute;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	border: 7px solid #9A9A9A;
+}
+
+.yui-tooltip-content {
+	/*background-color: #ECECEC;*/
+	background-color: #FFF;
+	/*color: #6F6F6F;*/
+	color: #000;
+	/*padding: 5px 8px 4px 8px;*/
+	/*padding: 10px;*/
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-color: #9A9A9A;
+	border-style: solid;
+	border-width: 1px;
+	font-size: 12px;
+
+	line-height: 17px;
+    
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	
+	-webkit-box-shadow: 0 4px 10px #9A9A9A;
+	-moz-box-shadow: 0 4px 10px #9A9A9A;
+	box-shadow: 0 4px 10px #9A9A9A;
+	cursor: default;
+	z-index: 1000002;
+}
+
+.yui-tooltip-content-nopadding {
+	background-color: #FFF;
+	color: #000;
+	border-color: #9A9A9A;
+	border-style: solid;
+	border-width: 1px;
+	font-size: 12px;
+
+	line-height: 17px;
+    
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	
+	-webkit-box-shadow: 0 4px 10px #9A9A9A;
+	-moz-box-shadow: 0 4px 10px #9A9A9A;
+	box-shadow: 0 4px 10px #9A9A9A;
+	cursor: default;
+	z-index: 1000002;
+}
+
+.yui-tooltip-content p.details{
+text-align: right;
+margin: 5px 0 0 0;
+}
+.yui-tooltip-content p.details a{
+font-size: 11px;
+text-decoration: none;
+color: #58ACC8;
+font-weight: bold;
+}
+
+DIV.yui-tooltip-content-close-button {
+	float: right;
+	/*position: relative;
+	right: -6px;
+	top: -1px;*/
+	position: absolute;
+	right: 12px;
+	top: 12px;
+	cursor: pointer;
+	line-height: 5px;
+	color: #6F6F6F;
+	font-weight: bold;
+	font-size: 12px;
+	height: 8px;
+	width: 8px;
+	background-image: url("/images/grey-cross.png");
+}
+
+/*IMG.yui-tooltip-content-close-button {
+	 position: relative; 
+	 cursor: pointer; 
+	 margin: -2px -5px 0px 5px;
+	 float: right;	 
+}*/
+/****************************************************************************************/
+
+/****************************************************************************************/
+.yui-tooltip-top .yui-tooltip-arrow-top {
+	bottom: 1px;	
+	border-bottom: none;
+	border-left-color: transparent;
+	border-right-color: transparent;
+}
+.yui-tooltip-subarrow-top {
+	bottom: 0;	
+	border-bottom: none;
+	border-left-color: transparent;
+	border-right-color: transparent;
+}
+
+.yui-tooltip-bottom .yui-tooltip-arrow-bottom {
+	top: 1px;	
+	border-top: none;
+	border-left-color: transparent;
+	border-right-color: transparent;
+}
+.yui-tooltip-subarrow-bottom {
+	top: 0;	
+	border-top: none;
+	border-left-color: transparent;
+	border-right-color: transparent;
+}
+
+.yui-tooltip-left .yui-tooltip-arrow-left {	
+	right: 1px;	 
+	border-right: none;
+	border-top-color: transparent;
+	border-bottom-color: transparent;	
+}
+.yui-tooltip-subarrow-left {
+	right: 0;	
+	border-right: none;
+	border-top-color: transparent;
+	border-bottom-color: transparent;	
+}
+
+.yui-tooltip-right .yui-tooltip-arrow-right {
+	left: 1px;	
+	border-left: none;
+	border-top-color: transparent;
+	border-bottom-color: transparent;	
+}
+.yui-tooltip-subarrow-right {
+	left: 0;	
+	border-left: none;
+	border-top-color: transparent;
+	border-bottom-color: transparent;	
+}
+/****************************************************************************************/
+
+.loading_div {
+	width: 50px;
+	height: 50px;
+	background: transparent url(/images/ajax_loader.gif) no-repeat center center;	
+}

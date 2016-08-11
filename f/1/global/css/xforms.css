@@ -1,0 +1,606 @@
+form
+, form .fieldset
+, form .fieldset .legend
+, form .row
+, form .row .label
+, form .row .field
+, form .row .comment
+, form .row .example
+, form .row .required_message
+, form .row .valid_message
+{
+display: block;
+margin: 0;
+padding: 0;
+text-decoration: none;
+line-height: 1.2;
+}
+
+#content form { width: 40em; }
+
+form .fieldset
+{
+position: relative;
+width: 100%;
+margin: 0 0 2.4em 0;
+}
+form .row
+{
+position: relative;
+clear: left;
+width: 100%;
+margin: 0 0 0.6em 0;
+}
+form .row .label
+{
+float: left;
+width: 9em;
+margin-right: -100%;
+}
+form .row .field
+{
+-float: left;
+padding-left: 10em;
+zoom: 1;
+}
+body .wide .label
+{
+float: none;
+width: auto;
+margin-right: 0;
+}
+body .wide .field
+{
+margin-left: 0;
+padding-left: 0;
+}
+form input.text
+, form textarea
+{
+display: block;
+width: 100%;
+}
+form textarea
+{
+height: 10em;
+overflow: visible;
+}
+form textarea, x:-moz-any-link { font-size: 120%; }
+
+/* text & messages: comment, example, required, valid */
+
+form .row .comment
+, form .row .example
+, form .row .required_message
+, form .row .valid_message
+{
+font-size: 0.89em;
+}
+
+/* disabled fileds */
+
+form .disabled label
+, form .disabled .legend
+, form .disabled ins
+{
+opacity: 0.3;
+}
+.hide_disabled .disabled
+{
+display: none;
+}
+
+/* invalid fields */
+
+form .invalid input
+, form .invalid select
+, form .invalid textarea
+, form .invalid .valid_message
+{
+color: #E2005E;
+}
+form .valid input
+, form .valid textarea
+{
+color: green;
+}
+
+/* required fields */
+
+form.touched dl.required .label label {
+	color: #E2005E;
+}
+
+/*
+form dl.required .label label:after
+, form div.required .legend:after
+{
+content: '*';
+color: red;
+}
+form dl.required .label label
+, form div.required .legend
+{
+behavior: expression(
+    ( !this.bRequired )
+    ?
+        ( this.bRequired = true )
+        & ( eU = document.createElement( '<u />' ) )
+        & ( eU.innerHTML = '*' )
+        & ( this.appendChild( eU ) )
+    : ''
+);
+}
+
+
+form dl.required .label u
+, form div.required .legend u
+{
+color: red;
+text-decoration: none;
+}
+form dl.required-ok .label u
+, form div.required-ok .legend u
+, form dl.required-ok .label:after
+, form div.required-ok .legend:after
+{
+content: '';
+display: none;
+}
+*/
+form .row .example, form .comment { color: #848484; }
+form .row .required_message
+{
+clear: left;
+position: absolute;
+z-index: 1;
+left: 100%;
+bottom: 0;
+width: 12em;
+margin: 0;
+padding: 0.25em 0.5em;
+background: #eeeecc;
+visibility: hidden;
+}
+form.submitted .required .required_message
+{
+visibility: visible;
+}
+
+/* radio & checkbox fields */
+
+form .selector
+{
+float: left;
+line-height: 1.2em;
+position: relative;
+width: 100%;
+min-height: 12px;
+margin: 0 0 0.6em 0;
+}
+form .optgroup
+{
+margin: 0 0 0 0;
+padding: 0 0 1em 0;
+}
+form .optgroup .label
+{
+display: block;
+font-weight: normal;
+float: none;
+width: auto;
+margin: 0 0 0.5em 0;
+}
+form .selector input
+{
+position: absolute;
+left: 0;
+top: 0.6em;
+height: 14px;
+margin: -6px 0 0 0;
+//margin-left: -3px;
+}
+form .selector label
+{
+position: relative;
+float: left;
+//display: inline;
+width: auto;
+margin: 0 0 0 18px;
+}
+form .horizontal .optgroup
+{
+float: left;
+width: auto;
+}
+form .horizontal .selector
+{
+float: left;
+width: auto;
+margin-right: 2em;
+}
+
+
+/* datetime */
+
+.input-hour
+{
+margin-left: 1em;
+}
+.input-minute:before
+, .input-second:before
+{
+content: ':';
+margin-left: 0.2em;
+margin-right: 0.2em;
+}
+
+/* common styles */
+
+form .row:after
+, form .row .field:after
+, form .selector:after
+{
+content: '';
+height: 0;
+display: block;
+clear: both;
+}
+
+form .for_input .label label
+, form .for_textarea .label label
+, form .for_select .label label
+{
+display: block;
+/*font-style: italic;*/
+}
+
+
+/* combobox */
+
+form .for_combobox
+, form .for_combobox .field
+{
+position: relative;
+z-index: 998;
+}
+form .for_combobox .combo-list
+{
+display: none;
+}
+form .combo-field-active
+, form .combo-field-active .combo-list
+{
+z-index: 999;
+}
+form .combo-field-active .combo-list
+{
+display: block;
+position: absolute;
+//top: 1.7em;
+left: 11em;
+}
+
+
+/* slider */
+
+form .slider-horizontal
+{
+position: absolute;
+bottom: 0;
+left: 11em;
+right: 0;
+}
+form .slider-inited
+{
+padding-bottom: 2em;
+}
+
+
+/* placeholder */
+
+.placeholder
+{
+color: #8699b2;
+}
+
+
+/* repeated fields & fieldsets */
+
+form .invisible
+{
+position: absolute;
+visibility: hidden;
+}
+form .repeat_control
+{
+display: block;
+text-decoration: none;
+line-height: 1.2;
+position: absolute;
+left: 100%;
+width: 12em;
+margin: 0 0 0 1em;
+padding: 0;
+}
+form .row .repeat_control
+, form .fieldset .row .repeat_control
+{
+top: 0;
+}
+form .fieldset .repeat_control
+{
+bottom: 0;
+}
+
+/* tab & sheets */
+
+form.with_sheets .type_submit input
+{
+float: right;
+}
+form .sheets
+, form .sheets .tabs
+, form .sheets .tabs .legend
+, form .sheets .sheet
+, form .sheets .sheet .sheet_control
+{
+display: block;
+margin: 0;
+padding: 0;
+text-decoration: none;
+line-height: 1.2;
+}
+form .sheet-container-inited .tabs .legend
+{
+margin-bottom: 1em;
+}
+form .sheet-container-inited .tabs .legend
+, form .sheet-container-inited .sheet
+{
+display: none;
+}
+form .sheet-container-inited .tabs .selected
+, form .sheet-container-inited .selected
+{
+display: block;
+}
+form .sheets .sheet .sheet_control .prev
+{
+float: left;
+}
+form .sheets .sheet .sheet_control .next
+{
+float: right;
+}
+form .sheets .sheet .sheet_control:after
+{
+content: '';
+height: 0;
+display: block;
+clear: both;
+}
+
+/* range class */
+
+form .range:after
+{
+content: '';
+height: 0;
+display: block;
+clear: both;
+}
+form .range .legend
+, form .range .row
+, form .range .label
+, form .range .field
+, form .range input
+, form .range select
+, form .range .example
+{
+clear: none;
+float: left;
+width: auto;
+font-size: 1em;
+font-weight: normal;
+margin: 0;
+padding: 0;
+}
+form .range .reducer
+{
+width: auto;
+}
+form .range .legend
+{
+width: 11em;
+}
+form .range .example
+{
+padding-left: 0.25em;
+}
+form .range .legend
+, form .range .example
+{
+display: block;
+}
+form .range .label label
+{
+margin-right: 0.3em;
+}
+form .range .field
+{
+padding: 0 0.35em 1.2em 0;
+}
+
+
+/* slider */
+.slider {
+	position: relative;
+}
+
+.slider-horizontal {
+	width: 400px;
+}
+
+.slider-horizontal .slider-scale {
+	position: relative;
+	height: 20px;
+	width: 100%;
+	background: url(slider-horizontal-line.gif) top repeat-x;
+}
+
+.slider-vertical {
+	height: 400px;
+}
+
+.slider-vertical .slider-scale {
+	position: relative;
+	width: 20px;
+	height: 400px;
+	background: url(slider-vertical-line.gif) left repeat-y;
+}
+
+.slider div div {
+	position: absolute;
+}
+
+.slider-control {
+	left: 0;
+	cursor: pointer;
+	cursor: hand;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	z-index: 2;
+}
+
+.slider-control-selected {
+	z-index: 3;
+}
+
+.slider-horizontal .slider-control {
+	top: 0;
+	width: 11px;
+	height: 14px;
+	margin-left: -5px;
+	background-image: url(slider-horizontal-control.gif);
+}
+
+.slider-vertical .slider-control {
+	width: 14px;
+	height: 11px;
+	margin-bottom: -5px;
+	background-image: url(slider-vertical-control.gif);
+}
+
+.slider-value {
+	font-size: 0.7em;
+}
+
+.slider-horizontal .slider-value {
+	bottom: 25px;
+}
+
+.slider-vertical .slider-value {
+	left: 25px;
+	margin-bottom: -6px;
+}
+
+.slider-value-selected {
+	color: #E2005E;
+}
+
+.slider .slider-mark {
+	font-size: 0.6em;
+	color: #BBB;
+}
+
+.slider-horizontal .slider-mark {
+	top: -5px;
+	padding-top: 9px;
+	text-align: center;
+	background: url(slider-horizontal-mark.gif) 0 0 no-repeat;
+}
+
+.slider-vertical .slider-mark {
+	left: 0;
+	padding-left: 7px;
+	background: url(slider-vertical-mark.gif) left bottom no-repeat;
+}
+
+.slider .slider-range {
+	position: absolute;
+	overflow: hidden;
+}
+
+.slider-horizontal .slider-range {
+	top: -3px;
+	height: 3px;
+}
+
+.slider-vertical .slider-range {
+	left: -3px;
+	width: 3px;
+}
+
+.slider .slider-range-0 {
+	background: #E2005E;
+}
+
+.slider .slider-range-1 {
+	background: blue;
+}
+
+.slider .slider-range-2 {
+	background: green;
+}
+
+.slider .slider-range-3 {
+	background: yellow;
+}
+
+.disabled .slider .slider-control,
+.slider .slider-control-disabled {
+	cursor: default;
+	z-index: 1;
+}
+
+.disabled .slider-horizontal .slider-control,
+.slider-horizontal .slider-control-disabled {
+	background-image: url(slider-horizontal-control-disabled.gif);
+}
+
+.disabled .slider-vertical .slider-control,
+.slider-vertical .slider-control-disabled {
+	background-image: url(slider-vertical-control-disabled.gif);
+}
+
+.disabled .slider .slider-mark,
+.disabled .slider .slider-value,
+.slider-value-disabled {
+	color: #CCC;
+}
+
+/* refresh button for captcha */
+div.captcha_image {
+	position: relative;
+	width: 150px;
+}
+div.captcha_image i {
+	position: absolute;
+	top: 0;
+	right: -10px;
+	width: 9px;
+	height: 10px;
+	background: transparent url('/r/5/f/i/i-refresh.gif') no-repeat;
+	display: block;
+	cursor: pointer;
+	//cursor: hand;
+}
+
+
+
+.main-text-content form { float: left; width: 30em; margin-top: 2em; }
+
+form .file {
+	margin:0;
+}

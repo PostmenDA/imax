@@ -1,0 +1,55 @@
+.eway-autocomplete-menu {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	border: solid 1px #999;
+	background-color: #CECECE;
+	z-index: 1000001;
+}
+
+.eway-autocomplete-menu ul {
+	margin: 0;
+	padding: 0;
+}
+
+.eway-autocomplete-menu ul li {
+	margin: 0;
+	padding: 5px 10px 5px 33px;
+	list-style: none;
+	color: #676767;
+	cursor: pointer;
+	font-family: Verdana;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+.eway-autocomplete-menu ul li.selected {
+	background-color: #676767;
+	color: #CECECE;
+}
+
+.eway-autocomplete-menu ul li.eway-autocomplete-item-ADDRESS {
+	background-image: url(/images/menu-address.png);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+}
+
+.eway-autocomplete-menu ul li.eway-autocomplete-item-STOP {
+	background-image: url(/images/menu-stop.png);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+}
+
+.eway-autocomplete-menu ul li.eway-autocomplete-item-PLACE {
+	background-image: url(/images/menu-address.png);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+}
+
+.eway-autocomplete-menu ul li div.eway-autocomplete-item-name {
+	font-weight: bold;
+}
+
+.eway-autocomplete-menu ul li div.eway-autocomplete-item-type {
+	font-size: 9px;
+}

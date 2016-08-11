@@ -1,0 +1,28 @@
+a { color: #000000; }
+a:hover { color: #0092ce !important; }
+
+.navigation a { color: #00a0e2; }
+
+.navigation .selected,
+.navigation .selected a { color: #000; }
+
+.navigation .selected .d-tl { background-position: -6px -6px; }
+.navigation .selected .d-tr { background-position: 0 -6px; }
+.navigation .selected .d-bl { background-position: -6px 0; }
+
+#footer .copyright { color: #7f7f7f; }
+
+#navigation-path,
+#navigation-path a { color: #7f7f7f; }
+
+#quick-info { background: #e7e7e7; }
+
+.gallery-thumbnails a .thumbnail { background: #e7e7e7; }
+
+.comment-info,
+.comment-info a,
+.comment-control,
+.comment-control a,
+.questions-list p { color: #7f7f7f; }
+
+.pages-navigation .prev { color: #7f7f7f; }

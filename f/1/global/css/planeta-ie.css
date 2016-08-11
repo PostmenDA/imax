@@ -1,0 +1,127 @@
+.pseudo { border-style_: none none dotted; }
+
+ul li {
+	behavior: expression( !this.before ? this.before = this.innerHTML = '<span class="dash">&mdash;</span>' + this.innerHTML : '' );
+	text-indent: -1.8em;
+}
+ul .dash { margin-right: 0.8em; }
+
+.navigation li,
+ul.archive li,
+ul.showtimes li,
+ul.social li { behavior: none; text-indent: 0; }
+
+#navigation { zoom: 1; }
+
+#navigation .navigation { zoom: 1; }
+
+.navigation li { zoom: 1; position: relative; }
+
+.switcher .pseudo { position: relative; }
+
+.five-columns .column.last { width: 19.8%; }
+
+#quick-info .reducer { position: relative; zoom: 1; }
+#quick-info .wrapper { zoom_: 1; }
+#quick-info .wrapper .movie { width_: 100%; zoom_: 1; }
+
+#content { padding-top: 2em; }
+
+.tabs { height: 2.8em; }
+
+.scroll-strip { overflow-x: scroll; position: relative; }
+
+#movies-scroll { zoom: 1; }
+#movies-scroll > .d-bg { height: expression(eval(this.parentNode.offsetHeight) + "px"); }
+
+#movies-scroll .coming-soon > .d-bg { width: expression(eval(this.parentNode.offsetWidth) + "px") }
+
+.showtimes a.time { zoom: 1; }
+
+.showtimes .time .d-tl,
+.showtimes .time .d-tr { top: -2px; }
+
+.showtimes-head { z-index: 1; }
+.showtimes-head .reducer,
+.showtimes-head .reducer > .time-line { zoom: 1; }
+
+.showtimes-head .hours { padding-top: 1em; }
+.showtimes-head .hours .d-bg { width_: expression(eval(this.parentNode.parentNode.offsetWidth) + "px") }
+
+.showtimes-head > .d-bg { width: expression(eval(this.parentNode.offsetWidth) + "px") }
+
+.showtimes-clock { zoom: 1; position: relative; z-index: 100; }
+.showtimes-clock .line .label .text { top: -1px; }
+
+.showtimes-body .lines { zoom: 1; }
+
+.movie-thumbs .movie .poster:hover img { filter:alpha(opacity=50); }
+.movie-thumbs .movie.selected .poster:hover img { filter:false; }
+
+.movie-posters-list .d-bg {
+	height_: expression(eval(this.parentNode.offsetHeight) + "px");
+}
+
+.d-button .text { top: 14px; cursor: pointer; }
+
+.movie-thumbs .movie .poster { cursor: pointer; }
+
+.calendar { zoom: 1; }
+
+
+#content .prices-tabs,
+#content .prices-tab,
+#content .prices-section { zoom: 1; }
+
+#content .prices-line .price strong { margin-left: -0.75em; margin-top: -0.6em; }
+
+.dark-page #quick-info .wrapper,
+.dark-page #quick-info .d-top,
+.dark-page #quick-info .d-bottom {
+	background: transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E52E2E2E,endColorstr=#E52E2E2E);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E52E2E2E,endColorstr=#E52E2E2E)";
+}
+
+.dark-page .showtimes-clock .line { background: #671135; }
+
+.dark-page .showtimes-head .hours .selected,
+.dark-page .showtimes-body .lines .hour-highlight {
+	background: transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#19FFFFFF,endColorstr=#19FFFFFF);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#19FFFFFF,endColorstr=#19FFFFFF)";
+}
+
+.dark-page .showtimes-row .dates .next { color: #555; }
+
+
+.light-page #quick-info .wrapper,
+.light-page #quick-info .d-top,
+.light-page #quick-info .d-bottom {
+	background: transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E5F4F4F4,endColorstr=#E5F4F4F4);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E5F4F4F4,endColorstr=#E5F4F4F4)";
+}
+
+.light-page .showtimes-clock .line { background: #efb7ce; }
+
+.light-page .showtimes-head .hours .selected,
+.light-page .showtimes-body .lines .hour-highlight {
+	background: transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#19000000,endColorstr=#19000000);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#19000000,endColorstr=#19000000)";
+}
+#mob-app-promo img {
+	background: transparent;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE8 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);   /* IE6 & 7 */
+    zoom: 1;
+}
+
+/* Addon navigation */
+.addon-menu__container {
+	display:block;
+}
+.addon-menu__closed .addon-menu__container {
+	display:none;
+}

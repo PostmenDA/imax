@@ -1,0 +1,55 @@
+.tooltip_left_div{
+	background: transparent url(../images/blue/tooltip_bg_left.png) no-repeat left top;
+}
+.tooltip_right_div{
+	background: transparent url(../images/blue/tooltip_bg_right.png) no-repeat right top;
+}
+.tooltip_center_div{
+	background: transparent url(../images/blue/tooltip_bg.png) repeat-x center top;
+}
+#eway_widget_table .eway_widget_header_left{
+	background: transparent url(../images/blue/blue-left.png) no-repeat left top;
+	padding-left: 9px;
+}
+#eway_widget_table .eway_widget_header_right{
+	background: transparent url(../images/blue/blue-right.png) no-repeat right top;
+	padding-right: 9px;
+}
+#eway_widget_table .eway_widget_header{
+	background: #35a2c3;
+}
+#eway_widget_table .eway_widget_footer{
+	background: #35a2c3;
+}
+#eway_widget_table .eway_widget_footer a{
+	color: #FFFFFF;
+}
+#eway_widget_table .eway_widget_map_wrap_border{
+	/*border: solid 2px #01b6dc;
+	border-top: none;*/
+}
+#eway_widget_table .eway_widget_container{
+	border: solid 4px #35a2c3;
+	border-top: none;
+}
+#eway_widget_table div.eway_widget_container.eway_routes_widget {
+	border-top: solid 4px #35a2c3;
+}
+#eway_widget_table .eway_widget_build_way_div{
+	background: #35a2c3; /*34a3c4*/
+	border: none;
+	margin: 1px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+#eway_widget_table .eway_widget_map_div{
+	color: #FFFFFF;
+	background-color: #35a2c3;
+	font-weight: normal;
+}
+#eway_widget_table .eway_widget_map_menu_div ul{
+	background-color: #35a2c3;
+}
+#eway_widget_table .eway_widget_menu_a{
+	color: #FFFFFF;
+}

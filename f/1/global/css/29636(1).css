@@ -1,0 +1,1179 @@
+/* Label Styles */
+/**
+* @package Livetex Invitation
+* @version 2.0
+* @company LiveTex //livetex.ru Сервисы для коммуникации с посетителями сайта
+*/
+
+
+@font-face {
+  font-family: 'ltRoboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(//fonts.gstatic.com/s/roboto/v13/neaHiVpEUkuPmSawsrNWSg.woff) format('woff');
+}
+@font-face {
+  font-family: 'ltRoboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(//fonts.gstatic.com/s/roboto/v13/77FXFjRbGzN4aCrSFhlh3j8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+} 
+@font-face {
+  font-family: 'LuxuryB';
+  src: url('/fonts/LuxuryB.eot');
+  src: url('/fonts/LuxuryB.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/LuxuryB.ttf') format('truetype'),
+  url('/fonts/LuxuryB.svg') format('svg'),
+  url('/fonts/LuxuryB.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('/fonts/fontawesome-webfont.eot?v=4.1.0');
+  src: url('/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'),
+  url('/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'),
+  url('/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'),
+  url('/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-indent: 0 !important;
+}
+.fa-user:before {
+  content: "\f007";
+}
+.fa-phone:before {
+  content: "\f095";
+}
+.fa-group:before,
+.fa-users:before {
+  content: "\f0c0";
+}
+/**
+ * Cobrowse
+ */
+.lt-shadow-field {
+  background: #000;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  position: absolute;
+  z-index: 10000;
+}
+.lt-cobrowse-close {
+  position: absolute;
+  z-index: 10001;
+  width: 26px;
+  height: 26px;
+  background: url(/img/cobrowse-close.png) no-repeat 0 0;
+  cursor: pointer;
+  right: 5px;
+  top: 5px;
+}
+.lt-invite {
+  width: 0;
+  height: 0;
+  position: fixed;
+  z-index: 9999;
+  padding: 0;
+  margin: 0;
+}
+.lt-invite.lt-hidden {
+  display: none;
+}
+.lt-invite .lt-label {
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+}
+.lt-invite .lt-label .lt-logo {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+}
+.lt-invite .lt-label .lt-label-bg {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+}
+.lt-invite .lt-close-btn{
+  position: absolute;
+  cursor: pointer;
+  cursor: pointer;
+  display: inline-block;
+  height: 20px;
+  text-align: center;
+  width: 20px;
+  opacity: 0;
+  padding: 20px;
+  cursor: pointer;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 18px;
+  font-weight: bold;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+
+  -webkit-transition: opacity .3s ease-out;
+  -moz-transition: opacity .3s ease-out;
+  -o-transition: opacity .3s ease-out;
+  transition: opacity .3s ease-out;
+
+  color: #3099dd;
+}
+.lt-invite.lt-offline .lt-close-btn,
+.lt-invite.lt-lead .lt-close-btn {
+  color: #464646;
+  }
+.lt-invite.lt-active:hover .lt-close-btn{
+  opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);'
+}
+.lt-invite .lt-content {
+  width: 310px;
+  height: 334px;
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s 0.6s linear;
+  transition: visibility 0s 0.6s linear;
+}
+.lt-invite .lt-operator{
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 25px;
+  border: 1px solid #d9d9d9;
+  position: absolute;
+  left: 13px;
+  top: 13px;
+}
+.lt-invite .lt-operator img{
+  width: 50px;
+}
+.lt-invite .lt-name {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 15px;
+  left: 76px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+  width: 226px;
+}
+.lt-invite .lt-depart {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 32px;
+  left: 76px;
+  font-size: 13px;
+  color: #959595;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+  width: 226px;
+}
+.lt-invite .lt-greet {
+  border-radius: 5px;
+  position: relative;
+  width: 209px;
+  margin: 59px 0 0 70px;
+  padding: 10px;
+  background-color: #3099dd;
+      color: #fff;
+  }
+.lt-invite .lt-greet:before {
+  content: 'D';
+  display: inline-block;
+  font-family: LuxuryB;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  left: -5.6px;
+  top: 0px;
+  width: 12px;
+  height: 9px;
+  font-size: 20px;
+  overflow: hidden;
+  color: #3099dd;
+}
+.lt-invite .lt-greet-text {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.3em;
+      color: #fff;
+  }
+.lt-invite .lt-footer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+      color: #959595;
+    position: absolute;
+  bottom: 11px;
+  left: 11px;
+  text-align: left;
+}
+.lt-invite .lt-footer a {
+      color: #557a93;
+  
+  text-decoration: none;
+}
+/* Форма отправки первого сообщения */
+.lt-invite .lt-textarea {
+  padding: 11px 13px;
+}
+.lt-invite .lt-textarea textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #959595;
+  border-radius: 5px;
+  margin: 0;
+  padding: 5px;
+  width: 287px;
+  height: 70px;
+  overflow: auto;
+  box-sizing: border-box;
+  resize: none;
+  font-size: 13px;
+}
+.lt-invite .msg-counter {
+  display: none;
+  height: 15px;
+  padding: 0 5px;
+  border: 1px solid #d2d2d2;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  line-height: 15px;
+  color: #949494;
+  text-align: center;
+  position: absolute;
+  right: 30px;
+  top: 16px;
+  background: #fff;
+  opacity: 0.9;
+}
+.lt-invite .counter-show {
+  display: block;
+  position: relative;
+}
+.lt-invite .msg-counter.counter-error {
+  border: 1px solid #e16868;
+  color: #e16868;
+}
+.lt-invite .counter-show .msg-counter {
+  display: block;
+}
+.lt-invite .lt-send {
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  border-collapse: collapse;
+  padding: 0 5px;
+  line-height: 28px;
+  height: 28px;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 13px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 -1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0 -1px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.25);
+  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
+  background-image: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
+  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
+  position: absolute;
+  bottom: 40px;
+  right: 10px;
+  background-color: #3099dd;
+      text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    color: #fff;
+  }
+.lt-invite .lt-cancel {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 26px;
+  line-height: 26px;
+  text-decoration: none;
+  padding: 0 5px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 40px;
+  right: 102px;
+
+      border: solid 1px #3099dd;
+    color: #3099dd;
+  }
+.lt-invite.lt-call-me .lt-cancel {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 5px;
+  text-decoration: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+      border: solid 1px #3099dd;
+    color: #3099dd;
+  }
+.lt-invite .lt-cancel-chat-link {
+  display: none;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 25px;
+  line-height: 26px;
+  text-decoration: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  position: absolute;
+  padding: 1px 6px 1px 30px;
+  left: 121px;
+  bottom: 40px;
+  border: solid 1px #3099dd;
+      color: #3099dd;
+  }
+.lt-invite .lt-cancel-chat-link:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 7px;
+  top: 5px;
+  width: 17px;
+  height: 15px;
+  background: url(/img/sprite.png) no-repeat -29px -9px;
+      background-color: #3099dd;
+  }
+
+/* Кнопки обраной связи  */
+.lt-invite .lt-choice {
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.lt-invite .lt-choice .lt-btn-call-later {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 28px;
+  line-height: 26px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0 5px;
+  margin-right: 10px;
+      border: solid 1px #3099dd;
+    color: #3099dd;
+  }
+.lt-invite .lt-choice .lt-btn-start-chat {
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  border-collapse: collapse;
+  padding: 0 5px;
+  line-height: 28px;
+  height: 28px;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 13px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 -1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0 -1px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.25);
+  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
+  background-image: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
+  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
+  background-color: #3099dd;
+      text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    color: #fff;
+  }
+.lt-call-title {
+  display: none;
+  font-weight: bold;
+  color: #000;
+  font-size: 15px;
+  position: absolute;
+  top: 77px;
+  left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Форма обратной связи */
+.lt-invite.lt-call-lead .lt-op-info {
+  background-color: #fdfdfd;
+  height: 105px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.lt-invite .lt-call-me-form {
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  text-align: right;
+}
+.lt-invite .lt-call-me-form .lt-header {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #000;
+  position: absolute;
+  top: -28px;
+  font-size: 14px;
+}
+.lt-invite .lt-call-me-form .lt-group-label {
+  width: 100%;
+  margin-right: 10px;
+  display: block;
+  margin-bottom: 13px;
+  font: 0/0 normal Arial;
+  height: 32px;
+  position: relative;
+  background: #fafafa;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhZmFmYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZmVmZWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  #fafafa 0%, #efefef 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fafafa), color-stop(100%,#efefef));
+  background: -webkit-linear-gradient(top,  #fafafa 0%,#efefef 100%);
+  background: -o-linear-gradient(top,  #fafafa 0%,#efefef 100%);
+  background: -ms-linear-gradient(top,  #fafafa 0%,#efefef 100%);
+  background: linear-gradient(to bottom,  #fafafa 0%,#efefef 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#efefef',GradientType=0 );
+  border: 1px solid #a7a7a7;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: inset 0 1px 0 0 #f0f0f0;
+  -webkit-box-shadow: inset 0 1px 0 0 #f0f0f0;
+  overflow: hidden;
+  padding-left: 40px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: transparent;
+  text-indent: 0;
+}
+.lt-invite .lt-call-me-form .lt-group-label:before {
+  content: "";
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  margin-top: -6px;
+  height: 12px;
+  width: 1px;
+  background: #cccccc;
+}
+.lt-invite .lt-call-me-form .lt-group-label .lt-icon {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-indent: 0 !important;
+  left: 9px;
+  top: 50%;
+  margin-top: -7px;
+  font-size: 14px;
+  position: absolute;
+  z-index: 10;
+  color: #C8C8C8;
+}
+.lt-invite .lt-call-me-form .lt-group-label:after {
+  content: '\f0dc';
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  border-radius: 5px;
+  margin-top: -7px;
+  -webkit-border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  color: #7F7F7F;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.lt-invite .lt-call-me-form .lt-group-label select {
+  -moz-appearance:none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  text-indent: 0.01px;
+  text-overflow: '';
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  outline: none;
+  border: 0;
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font: 13px/30px normal Arial, Helvetica, sans-serif;
+  height: 32px;
+  cursor: pointer;
+  padding-right: 20px;
+  color: #000;
+  padding-bottom: 10px\0/;
+}
+.lt-invite .lt-call-me-form .lt-group-label.error {
+  border: 1px solid #e16868;
+  -webkit-box-shadow: 0 0 0 0 2px #ecd2d2;
+  box-shadow: 0 0 0 2px #ecd2d2;
+}
+.lt-invite .lt-call-me-form .lt-group-label select::-ms-expand {
+  display: none;
+}
+.lt-invite .lt-call-me-form .lt-group-label {
+  display: none;
+}
+.lt-invite input::-webkit-input-placeholder {
+  color: #999;
+  font: normal 13px/17px Helvetica, Arial, sans-serif;
+}
+.lt-invite input:-moz-placeholder {
+  color: #999;
+  font: normal 13px/17px Helvetica, Arial, sans-serif;
+}
+.lt-invite input::-moz-placeholder {
+  color: #999;
+  font: normal 13px/17px Helvetica, Arial, sans-serif;
+}
+.lt-invite input:-ms-input-placeholder {
+  color: #999;
+  font: normal 13px/17px Helvetica, Arial, sans-serif;
+}
+.lt-invite input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.lt-invite input:focus:-moz-placeholder { /* Firefox 18- */
+  color: transparent;
+}
+.lt-invite input:focus::-moz-placeholder {  /* Firefox 19+ */
+  color: transparent;
+}
+.lt-invite input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.lt-invite textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.lt-invite textarea:focus:-moz-placeholder { /* Firefox 18- */
+  color: transparent;
+}
+.lt-invite textarea:focus::-moz-placeholder {  /* Firefox 19+ */
+  color: transparent;
+}
+.lt-invite textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.lt-invite .lt-call-me-form label {
+  display: block;
+  width: 100%;
+  margin-bottom: 13px;
+  height: 32px;
+  font-size: 0;
+  position: relative;
+  background: #fff;
+  border: 1px solid #a7a7a7;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: inset 0 1px 0 0 #f0f0f0;
+  -webkit-box-shadow: inset 0 1px 0 0 #f0f0f0;
+  overflow: hidden;
+}
+.lt-invite .lt-call-me-form label:before {
+  content: "";
+  position: absolute;
+  left: 32px;
+  top: 10px;
+  height: 12px;
+  width: 1px;
+  background: #cccccc;
+}
+.lt-invite .lt-call-me-form label.lt-label-name .lt-icon {
+  left: 11px;
+  top: 9px;
+  font-size: 14px;
+  position: absolute;
+  z-index: 10;
+  color: #C8C8C8;
+}
+.lt-invite .lt-call-me-form label.lt-label-phone .lt-icon {
+  color: #C8C8C8;
+  font-size: 14px;
+  left: 13px;
+  top: 10px;
+  position: absolute;
+  z-index: 10;
+}
+.lt-invite .lt-call-me-form label input {
+  background: transparent;
+  width: 100%;
+  height: 32px;
+  outline: none;
+  padding: 7px 5px 7px 44px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  text-indent: 0;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  line-height: 14px;
+}
+.lt-invite .lt-call-me-form label input.error {
+  border: 1px solid #e16868;
+  -webkit-box-shadow: 0 0 0 0 2px #ecd2d2;
+  box-shadow: 0 0 0 2px #ecd2d2;
+}
+.lt-invite .lt-call-me-form .lt-back-link {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 26px;
+  line-height: 26px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  padding: 0px 6px 0px 30px;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1 !ie;
+  display: inline !ie;
+  margin-right: 10px;
+      color: #3099dd;
+    border: solid 1px #3099dd;
+  }
+.lt-invite .lt-call-me-form .lt-back-link:before {
+  content: "\f112";
+  display: block;
+  position: absolute;
+  left: 7px;
+  top: 5px;
+  width: 17px;
+  height: 15px;
+  font-size: 16px;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.lt-invite .lt-call-me-form .lt-btn-send-lead {
+  border: none;
+  border-collapse: collapse;
+  padding: 0 5px;
+  height: 28px;
+  line-height: 28px;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 13px;
+  -webkit-box-shadow: inset 0 -1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0 -1px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.25);
+  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
+  background-image: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
+  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
+  display: block;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1 !ie;
+  display: inline !ie;
+  background-color: #3099dd;
+      text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    color: #fff;
+  }
+
+/* Подтверждение отпарвки */
+.lt-invite .lt-send-confirm i.lt-icon {
+  position: absolute;
+  display: block;
+  top: 90px;
+  left: 100px;
+  width: 93px;
+  height: 92px;
+  background: url(/img/sprite.png) no-repeat -52px -350px;
+}
+.lt-invite .lt-send-confirm h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  top: 200px;
+  font-size: 15px;
+  font-weight: bold;
+  width: 100%;
+}
+.lt-invite .lt-send-confirm p {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  top: 225px;
+  font-size: 13px;
+  font-weight: normal;
+  width: 100%;
+  color: #676767;
+}
+.lt-invite .lt-send-confirm .lt-confirm-back {
+  height: 26px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: solid 1px #3099dd;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 13px;
+  color: #3099dd;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 1px 6px 1px 30px;
+}
+.lt-invite .lt-send-confirm .lt-confirm-back:before {
+  content: "\f112";
+  display: block;
+  position: absolute;
+  left: 7px;
+  top: 5px;
+  width: 17px;
+  height: 15px;
+  font-size: 16px;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Форма  */
+
+/* Формы и другие динамические элементы */
+.lt-invite .lt-call-me-form {
+  display: none;
+}
+.lt-invite .lt-confirm-block {
+  display: none;
+}
+.lt-invite .lt-choice {
+  display: none;
+}
+.lt-invite .lt-cancel-chat-link {
+  display: none;
+}
+.lt-invite .lt-call-me {
+  display: none;
+  padding: 11px;
+}
+.lt-invite .lt-send-confirm {
+  display: none;
+}
+
+
+/* Стили встроенных окон */
+.lt-invite iframe {
+  display: none;
+}
+.lt-frame iframe {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  display: block;
+  border: none;
+}
+.lt-frame .lt-invite-message {
+  display: none;
+}
+.lt-lead .lt-invite-message {
+  display: none;
+}
+
+/* Поведенеие открытого окна */
+.lt-invite.lt-active .lt-content {
+  visibility: visible;
+  -webkit-transition: visibility 0s 0s linear;
+  transition: visibility 0s 0s linear;
+  background-color: #f0f0f0;
+}
+
+/* Форма запроса обратной связи */
+.lt-invite.lt-call-me .lt-choice{
+  display: block;
+}
+.lt-invite.lt-call-me  .lt-textarea {
+  display: none;
+}
+.lt-invite.lt-call-me .lt-send {
+  display: none;
+}
+/* Форма обратной связи */
+.lt-invite.lt-call-lead .lt-textarea {
+  display: none;
+}
+.lt-invite.lt-call-lead .lt-send {
+  display: none;
+}
+.lt-invite.lt-call-lead .lt-cancel {
+  display: none;
+}
+.lt-invite.lt-call-lead .lt-greet {
+  display: none;
+}
+.lt-invite.lt-call-lead .lt-call-me-form {
+  display: block;
+}
+.lt-invite.lt-call-lead .lt-call-title {
+  display: block;
+}
+
+/* Форма отправки первого сообщения в чат */
+.lt-invite.lt-start-chat .lt-cancel {
+  display: none;
+}
+.lt-invite.lt-start-chat .lt-cancel-chat-link {
+  display: block;
+}
+
+/* Подтверждение отправки */
+.lt-invite.lt-call-confirm .lt-send-confirm{
+  display: block;
+}
+.lt-invite.lt-call-confirm .lt-greet {
+  display: none;
+}
+.lt-invite.lt-call-confirm .lt-textarea {
+  display: none;
+}
+.lt-invite.lt-call-confirm .lt-cancel {
+  display: none;
+}
+.lt-invite.lt-call-confirm .lt-send {
+  display: none;
+}
+.lt-invite.lt-call-confirm .lt-confirm-back {
+  display: none;
+}
+
+
+/* Большой ярлык */
+.lt-invite .lt-label .lt-logo {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  background: url('/img/logo.png') no-repeat 0px 0;
+  background: url('/img/sprite.png') no-repeat 0 -1px\0/;
+  background-size: contain;
+}
+.lt-invite.lt-lead .lt-label .lt-logo,
+.lt-invite.lt-offline .lt-label .lt-logo {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  background: url('/img/logo.png') no-repeat 0px 0;
+  background: url('/img/sprite.png') no-repeat 0 -1px\0/;
+  background-size: 28px;
+}
+.lt-invite .lt-label .lt-label-bg {
+  font-family: 'ltRoboto', sans-serif;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+}
+.lt-invite .lt-label .lt-label-bg:before {
+  content:"\0417\0430\0434\0430\0442\044c  \0432\043e\043f\0440\043e\0441";
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+      color: rgba(255, 255, 255, 0.95);
+    line-height: 14px;
+  letter-spacing: 0.5;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+}
+.lt-invite .lt-label .lt-label-bg:after {
+  content:"\043a\043e\043d\0441\0443\043b\044c\0442\0430\043d\0442  \043e\043d\043b\0430\0439\043d";
+  display: block;
+  font-weight: normal;
+  font-size: 11px;
+  letter-spacing: 0.5;
+      color: rgba(255, 255, 255, 0.85);
+    line-height: 13px;
+}
+.lt-invite.lt-offline .lt-label .lt-label-bg:before {
+   content:"\0417\0430\0434\0430\0442\044c  \0432\043e\043f\0440\043e\0441";
+      color: rgba(255, 255, 255, 0.95);
+    text-shadow: none;
+    font-size: 13px;
+}
+.lt-invite.lt-offline .lt-label .lt-label-bg:after {
+ content:"\043a\043e\043d\0441\0443\043b\044c\0442\0430\043d\0442  \043e\0444\0444\043b\0430\0439\043d";
+      color: rgba(255, 255, 255, 0.95);
+    text-shadow: none;
+  }
+.lt-invite.lt-lead .lt-label .lt-label-bg:before {
+  content:"\041f\043e\043b\0443\0447\0438\0442\044c  \043a\043e\043d\0441\0443\043b\044c\0442\0430\0446\0438\044e";
+      color: rgba(255, 255, 255, 0.95);
+    text-shadow: none;
+    font-size: 13px;
+}
+.lt-invite.lt-lead .lt-label .lt-label-bg:after {
+  content:"";
+  text-shadow: none;
+}
+/********************* BOTTOM ********************/
+.lt-close-btn {
+    left: -40px;
+    top: -40px;
+}
+.lt-invite {
+  height: 36px;
+  width: 166px;
+  bottom: 0;
+  left: 550px;
+}
+.lt-invite.lt-active {
+  width: 310px;
+  height: 372px;
+  -webkit-transition: height 0.6s cubic-bezier(0, 1, .64, 1), width 0s 0s linear;
+  transition: height 0.6s cubic-bezier(0, 1, .64, 1), width 0s 0s linear;
+}
+.lt-invite .lt-label {
+  left: 0;
+  top: 0;
+  height: 36px;
+  width: 166px;
+  position: absolute;
+  z-index: 2;
+  background-color: #3099dd;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.lt-invite.lt-offline .lt-label {
+  background-color: #464646;
+  }
+.lt-invite .lt-label .lt-logo {
+  top: 4px;
+  left: 5px;
+}
+.lt-invite .lt-label .lt-label-bg {
+  left: 40px;
+  top: 4px;
+}
+.lt-invite .lt-content {
+  left: 0;
+  top: 36px;
+}
+.lt-invite.lt-active .lt-content {
+  box-shadow: 0 -2px 0 #3099dd, 0 -3px 1px #bbbbbb;
+}
+.lt-invite.lt-active .lt-content:before {
+  top: -2px;
+  border-top: 1px solid #3099dd;
+}
+.lt-invite.lt-offline .lt-label .lt-logo {
+  width: 28px;
+  height: 28px;
+  background: url(/img/sprite.png) no-repeat 0px -1px;
+}
+.lt-invite.lt-offline .lt-label .lt-label-bg {
+  top: 5px;
+  left: 37px;
+}
+.lt-invite.lt-offline .lt-content:before {
+  display: none;
+}
+.lt-invite.lt-offline .lt-content {
+  box-shadow: 0 0 0 #3099dd, 0 0px 1px #bbbbbb;
+}
+.lt-invite.lt-offline.lt-active .lt-content {
+  height: 404px;
+}
+.lt-invite.lt-offline.lt-active {
+  height: 440px;
+}
+/* Lead */
+.lt-invite.lt-lead.lt-active .lt-content {
+  height: 404px;
+  width: 310px;
+}
+.lt-invite.lt-lead.lt-active {
+  height: 440px;
+  width: 310px;
+}
+.lt-invite.lt-lead {
+  width: 205px;
+}
+.lt-invite.lt-lead .lt-label {
+  width: 205px;
+  background-color: #464646;
+  background-color: #464646;
+  }
+.lt-invite.lt-lead .lt-logo {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  background: url(/img/logo.png) no-repeat 0px 0;
+  background-size: 28px;
+}
+.lt-invite.lt-lead .lt-label-bg {
+  top: 11px;
+  left: 40px;
+}
+.lt-invite.lt-lead .lt-content,
+.lt-invite.lt-offline .lt-content {
+  box-shadow: 0 -2px 0 #464646, 0 3px 1px #bbbbbb;
+}
+.lt-invite.lt-lead.lt-active .lt-content:before {
+  border-bottom: 1px solid #464646;
+}
+
+@media \0screen {
+  .lt-invite .lt-label .lt-label-bg {
+    height: 26px;
+    width: 112px;
+    right: 10px;
+      background: url(/img/sprite.png) no-repeat -2px -31px;
+    }
+  .lt-invite .lt-label .lt-label-bg:before,
+  .lt-invite .lt-label .lt-label-bg:after {
+    content: "" !important;
+  }
+  .lt-invite.lt-offline .lt-label .lt-label-bg {
+    width: 126px;
+    height: 26px;
+    right: 5px;
+      background: url(/img/sprite.png) no-repeat -129px -521px;
+    }
+  .lt-invite.lt-lead .lt-label-bg {
+    top: 13px;
+    right: 8px;
+    height: 13px;
+    width: 150px;
+      background: url(/img/sprite.png) no-repeat -147px -322px;
+    }
+}
+
+
+/* Calls */
+.lt-calls:before, .lt-calls:after {
+  display: block;
+  position: absolute;
+  content: '';
+}
+.lt-calls {
+  position: fixed;
+  z-index: 9999;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  background-color: #3099dd;
+  /* Don't-show in old IE */
+  *display: none;
+}
+
+  .lt-calls {
+    bottom: 0;
+    left: 750px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+      }
+
+  .lt-calls {
+    height: 36px;
+    width: 166px;
+  }
+  .lt-calls:before {
+    top: 6px;
+    left: 11px;
+    width: 26px;
+    height: 26px;
+        background: url(/img/sprite.png) no-repeat -66px -142px;
+      }
+  .lt-calls:after {
+    top: 7px;
+    right: 12px;
+    height: 23px;
+    width: 112px;
+          background: url(/img/sprite.png) no-repeat -4px -521px;
+      }
+
+.lt-calls.lt-hidden{
+    display: none;
+}
+ /*Custom CSS New*/
+
+
